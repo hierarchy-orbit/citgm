@@ -18,6 +18,7 @@
   "scripts": {
     "build": "rollup -c --preserveModules",
     "lint": "eslint bin/* lib/ test/ --cache",
+    "prepare": "npm run build",
     "tap": "tap --no-esm --no-coverage -J --timeout 480 \"test/**/test-*.js\"",
     "tap-coverage": "c8 --reporter lcov tap --no-esm --no-coverage -J --timeout 480 \"test/**/test-*.js\"",
     "test": "npm run lint && npm run tap"
